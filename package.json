@@ -1,0 +1,41 @@
+{
+  "name": "cheese-bread-js",
+  "version": "1.0.0",
+  "description": "A delicious and easy to cook CDN file caching for offline development environments.",
+  "engines": {
+    "node": ">=6"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "bin": {
+    "cheesebread": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gartz/cheese-bread-js.git"
+  },
+  "keywords": [
+    "cdn",
+    "offline",
+    "cache",
+    "web",
+    "server",
+    "develpment",
+    "delicious",
+    "easy",
+    "gluten-free",
+    "palio"
+  ],
+  "author": "Gabriel Reitz Giannattasio <g@gartz.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gartz/cheese-bread-js/issues"
+  },
+  "homepage": "https://github.com/gartz/cheese-bread-js#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "node-fetch": "^1.6.3"
+  }
+}
