@@ -11,7 +11,7 @@ const fetch = require('node-fetch');
 const dir = path.resolve(process.env.CACHE_DIR || `${os.homedir()}/.cheese-bread-js/cache`);
 const port = process.env.PORT || 3000;
 const host = process.env.HOST || '127.0.0.1';
-const log = process.env.LOG || true;
+const log = JSON.parse(process.env.LOG) || true;
 
 const app = express();
 
