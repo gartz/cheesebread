@@ -19,6 +19,7 @@ Delete all files from the folder: `${home}/.cheese-bread-js/cache` also known as
 * **HOST** (127.0.0.1): Define the host IP
 * **CACHE_DIR** (~/cheese-bread-js/cache): Define where the cache files will be saved
 * **LOG** (true): Display log information in the output
+* **EXTERNAL_URL** (http://${HOST}:${PORT}): URL used to access the server
 
 ## Motivation and Name
 

@@ -11,13 +11,18 @@ const fetch = require('node-fetch');
 const dir = path.resolve(process.env.CACHE_DIR || `${os.homedir()}/.cheese-bread-js/cache`);
 const port = process.env.PORT || 3000;
 const host = process.env.HOST || '127.0.0.1';
-const log = JSON.parse(process.env.LOG) || true;
+const externalUrl = process.env.EXTERNAL_URL || `http://${host}:${port}`;
+const log = JSON.parse(process.env.LOG || true);
 
 const app = express();
 
 //TODO: Create white-list support
 
-app.get('*', function (req, res) {
+app.get('/', (req, res) => {
+  res.send(`Missing target URL: ${externalUrl}/TARGET_URL`);
+});
+
+app.get('*', (req, res) => {
   const hash = crypto.createHash('sha256');
   const urlTarget = req.url.slice(1);
   hash.update(urlTarget);
@@ -30,7 +35,7 @@ app.get('*', function (req, res) {
     });
   })
     .then(() => {
-      if (log) console.log(`${urlTarget} - CACHE - ${filename}`)
+      if (log) console.log(`${urlTarget} - CACHE - ${filename}`);
       res.sendFile(filePath);
     })
     .catch(() => {
@@ -61,5 +66,5 @@ dir.split(path.sep).reduce((prev, current) => {
 }, '');
 
 server.listen(port, host, () => {
-  console.log(`Cheese Bread server is listening on http://${host}:${port}/`);
+  console.log(`Cheese Bread server is listening on ${externalUrl}/`);
 });
