@@ -14,11 +14,41 @@ The first time you hit that URL it will download, cache and provide the file. Th
 
 ## Install and run
 
-**NPM**:
+**NPM CLI**:
 ```bash
 npm install cheesebread -g
 cheesebread --help          # Command-line help
 cheesebread                 # Start the server
+```
+
+**NPM Project**:
+```bash
+npm install cheesebread --save-dev
+```
+
+Starting with Express (you can add to your current application).
+
+```js
+const http = require('http');
+const express = require('express');
+
+const cheesebread = require('cheesebread');
+
+const options = {
+  dir: 'cache', 
+  externalUrl: 'localhost:3000/proxy', 
+  log: true
+};
+
+const app = express(); 
+
+app.use('/proxy', cheesebread(options)))
+
+const server = http.createServer(cheesebread({ dir, externalUrl, log }));
+
+server.listen(3000, '127.0.0.1', () => {
+  console.log(`Cheese Bread server is listening on ${externalUrl}/`);
+});
 ```
 
 **Docker**:
@@ -30,6 +60,7 @@ docker run -p "3000:3000" gartz/cheesebread # Start docker container
 ## Purge the cache
 
 Delete all files from the folder: `${home}/.cheese-bread-js/cache` also known as `~/.cheese-bread-js/cache`
+
 
 ## Environment options
 
