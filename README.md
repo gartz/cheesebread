@@ -8,9 +8,22 @@ A delicious and easy to cook CDN file caching for offline development environmen
 npm start
 ```
 
-Type: `http://localhost:300/target_url` where `target_url` is an online address, for example: `http://localhost:3000/https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png`
+Type: `http://localhost:3000/target_url` where `target_url` is an online address, for example: `http://localhost:3000/https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png`
 
 The first time you hit that URL it will download, cache and provide the file. The subsequent attempts will access from the cache.
+
+## Install and run
+
+NPM:
+```bash
+npm install cheese-bread-js --save-dev
+```
+
+Docker:
+```bash
+docker pull gartz/cheese-bread-js
+docker run -p "3000:3000" gartz/cheese-bread-js
+```
 
 ## Purge the cache
 
