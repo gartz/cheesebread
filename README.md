@@ -1,8 +1,8 @@
-# Cheese Bread JS - cheesebread
+# cheesebread - Pão de Queijo
 A delicious and easy to cook CDN file caching for offline development environments.
 
-[![Npm Version](https://img.shields.io/npm/v/cheese-bread-js.svg)](https://npmjs.com/package/cheese-bread-js)
-[![Node Version](https://img.shields.io/node/v/cheese-bread-js.svg)](https://npmjs.com/package/cheese-bread-js)
+[![Npm Version](https://img.shields.io/npm/v/cheesebread.svg)](https://npmjs.com/package/cheesebread)
+[![Node Version](https://img.shields.io/node/v/cheesebread.svg)](https://npmjs.com/package/cheesebread)
 
 ```bash
 npm start
@@ -23,8 +23,8 @@ cheesebread                 # Start the server
 
 **Docker**:
 ```bash
-docker pull gartz/cheese-bread-js
-docker run -p "3000:3000" gartz/cheese-bread-js # Start docker container
+docker pull gartz/cheesebread
+docker run -p "3000:3000" gartz/cheesebread # Start docker container
 ```
 
 ## Purge the cache
