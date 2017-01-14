@@ -1,5 +1,8 @@
-# Cheese Bread
+# Cheese Bread JS
 A delicious and easy to cook CDN file caching for offline development environments.
+
+[![Npm Version](https://img.shields.io/npm/v/cheese-bread-js.svg)](https://npmjs.com/package/cheese-bread-js)
+[![Node Version](https://img.shields.io/node/v/cheese-bread-js.svg)](https://npmjs.com/package/cheese-bread-js)
 
 ```bash
 npm start
