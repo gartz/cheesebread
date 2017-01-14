@@ -1,4 +1,4 @@
-# Cheese Bread JS
+# Cheese Bread JS - cheesebread
 A delicious and easy to cook CDN file caching for offline development environments.
 
 [![Npm Version](https://img.shields.io/npm/v/cheese-bread-js.svg)](https://npmjs.com/package/cheese-bread-js)
@@ -14,15 +14,17 @@ The first time you hit that URL it will download, cache and provide the file. Th
 
 ## Install and run
 
-NPM:
+**NPM**:
 ```bash
-npm install cheese-bread-js --save-dev
+npm install cheesebread -g
+cheesebread --help          # Command-line help
+cheesebread                 # Start the server
 ```
 
-Docker:
+**Docker**:
 ```bash
 docker pull gartz/cheese-bread-js
-docker run -p "3000:3000" gartz/cheese-bread-js
+docker run -p "3000:3000" gartz/cheese-bread-js # Start docker container
 ```
 
 ## Purge the cache

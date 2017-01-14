@@ -1,5 +1,5 @@
 {
-  "name": "cheese-bread-js",
+  "name": "cheesebread",
   "version": "1.0.0",
   "description": "A delicious and easy to cook CDN file caching for offline development environments.",
   "engines": {
@@ -35,6 +35,8 @@
   },
   "homepage": "https://github.com/gartz/cheese-bread-js#readme",
   "dependencies": {
+    "command-line-args": "^3.0.5",
+    "command-line-usage": "^3.0.8",
     "express": "^4.14.0",
     "node-fetch": "^1.6.3"
   }
