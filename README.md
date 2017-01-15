@@ -1,6 +1,7 @@
 # cheesebread - Pão de Queijo
 A delicious and easy to cook CDN file caching for offline development environments.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8acfda7d26394c8aadbcab6a9ccc5c42)](https://www.codacy.com/app/gartz/cheesebread?utm_source=github.com&utm_medium=referral&utm_content=gartz/cheesebread&utm_campaign=badger)
 [![Npm Version](https://img.shields.io/npm/v/cheesebread.svg)](https://npmjs.com/package/cheesebread)
 [![Node Version](https://img.shields.io/node/v/cheesebread.svg)](https://npmjs.com/package/cheesebread)
 [![Build Status](https://travis-ci.org/gartz/cheesebread.svg?branch=master)](https://travis-ci.org/gartz/cheesebread)
