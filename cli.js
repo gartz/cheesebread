@@ -48,7 +48,7 @@ try {
   var cliOptions = commandLineArgs(optionDefinitions);
 } catch (err) {
   console.error(err.message);
-  process.exit(1)
+  process.exit(1);
 }
 
 if (cliOptions.help) {

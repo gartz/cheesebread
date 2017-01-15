@@ -70,6 +70,10 @@ Delete all files from the folder: `${home}/.cheese-bread-js/cache` also known as
 * **LOG** (true): Display log information in the output
 * **EXTERNAL_URL** (http://${HOST}:${PORT}): URL used to access the server
 
+## Todo
+
+* Create a wildcard to white-list target URLs
+
 ## Motivation and Name
 
 We want to show a project on CES that should run offline, and we need files from CDN to be cached in our Docker local 

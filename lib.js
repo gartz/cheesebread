@@ -1,23 +1,30 @@
 const fs = require('fs');
+const os = require('os');
 const crypto = require('crypto');
 const url = require('url');
 const path = require('path');
 
 const express = require('express');
-const fetch = require('node-fetch');
+const nodeFetch = require('node-fetch');
 
-function createApp({ dir, externalUrl, log }) {
+function createApp(options) {
+  const {
+    dir = `${os.homedir()}/.cheesebread/cache`,
+    externalUrl,
+    log
+  } = options;
+
   const app = express();
 
-  dir.split(path.sep).reduce((prev, current) => {
-    const partial = `${prev}/${current}`;
-    if (!fs.existsSync(partial)) {
-      fs.mkdirSync(partial);
+  path.resolve(dir).split(path.sep).reduce((prev, current) => {
+    const partial = [prev, current].filter(v => v).join(path.sep);
+    const currentPath = `${path.sep}${partial}`;
+
+    if (partial && !fs.existsSync(currentPath)) {
+      fs.mkdirSync(currentPath);
     }
     return partial;
   }, '');
-
-  //TODO: Create white-list support
 
   app.get('/', (req, res) => {
     res.send(`Missing target URL: ${externalUrl}/TARGET_URL`);
@@ -31,21 +38,19 @@ function createApp({ dir, externalUrl, log }) {
     const filePath = `${dir}/${filename}`;
 
     new Promise((resolve, reject) => {
-      fs.exists(filePath, (exists) => {
-        exists ? resolve(filePath) : reject();
-      });
+      fs.exists(filePath, exists => exists ? resolve(filePath) : reject());
     })
       .then(() => {
         if (log) console.log(`${urlTarget} - CACHE - ${filename}`);
         res.sendFile(filePath);
       })
       .catch(() => {
-        fetch(urlTarget)
+        nodeFetch(urlTarget)
           .then((fetchResponse) => {
             const destineFile = fs.createWriteStream(filePath);
             fetchResponse.body.pipe(destineFile);
             fetchResponse.body.pipe(res);
-            if (log) console.log(`${urlTarget} - ONLINE - ${filename}`)
+            if (log) console.log(`${urlTarget} - ONLINE - ${filename}`);
           })
           .catch(() => {
             if (log) console.log(`${urlTarget} - NOT FOUND`);
