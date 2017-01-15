@@ -7,6 +7,14 @@ const path = require('path');
 const express = require('express');
 const nodeFetch = require('node-fetch');
 
+function urlToFilename(urlTarget) {
+  if (!urlTarget) return '';
+
+  const hash = crypto.createHash('sha256');
+  hash.update(urlTarget);
+  return `${hash.digest('hex')}${path.extname(url.parse(urlTarget).pathname)}`;
+}
+
 function createApp(options) {
   const {
     dir = `${os.homedir()}/.cheesebread/cache`,
@@ -31,10 +39,8 @@ function createApp(options) {
   });
 
   app.get('*', (req, res) => {
-    const hash = crypto.createHash('sha256');
     const urlTarget = req.url.slice(1);
-    hash.update(urlTarget);
-    const filename = `${hash.digest('hex')}${path.extname(url.parse(urlTarget).pathname)}`;
+    const filename = urlToFilename(urlTarget);
     const filePath = `${dir}/${filename}`;
 
     new Promise((resolve, reject) => {
@@ -61,5 +67,7 @@ function createApp(options) {
     ;
   });
 }
+
+createApp.urlToFilename = urlToFilename;
 
 module.exports = createApp;
