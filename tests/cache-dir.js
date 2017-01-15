@@ -45,7 +45,7 @@ test('Should create nested dirs if path does not exist', (t) => {
   );
 
   // Remove the folder after test
-  fse.removeSync(path);
+  fse.removeSync(basePath);
 });
 
 test('Should be able to create folders in the home directory', (t) => {
