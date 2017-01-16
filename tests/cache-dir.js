@@ -13,9 +13,7 @@ test('Should create the dir if does not exist', (t) => {
   // If the folder for testing exists, remove it
   fse.removeSync(path);
 
-  cheesebread({
-    dir: path
-  });
+  cheesebread({ dir: path });
 
   t.ok(
     fs.existsSync(path),
@@ -35,9 +33,7 @@ test('Should create nested dirs if path does not exist', (t) => {
   // If the folder for testing exists, remove it
   fse.removeSync(path);
 
-  cheesebread({
-    dir: path
-  });
+  cheesebread({ dir: path });
 
   t.ok(
     fs.existsSync(path),
@@ -56,9 +52,7 @@ test('Should be able to create folders in the home directory', (t) => {
   // If the folder for testing exists, remove it
   fse.removeSync(path);
 
-  cheesebread({
-    dir: path
-  });
+  cheesebread({ dir: path });
 
   t.ok(
     fs.existsSync(path),

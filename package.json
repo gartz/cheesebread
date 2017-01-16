@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "rm -rf coverage && istanbul cover --print none tape tests/**/*.js | faucet && istanbul report text",
-    "cover": "rm -rf coverage && istanbul cover --print none tape tests/**/*.js | faucet && istanbul report text; open coverage/lcov-report/index.html"
+    "cover": "rm -rf coverage && istanbul cover --print none tape tests/**/*.js | faucet && istanbul report text; open coverage/lcov-report/index.html",
+    "lint": "eslint **/*.js"
   },
   "bin": {
     "cheesebread": "./cli.js"
@@ -43,6 +44,7 @@
     "node-fetch": "^1.6.3"
   },
   "devDependencies": {
+    "eslint": "^3.13.1",
     "faucet": "0.0.1",
     "fs-extra": "^1.0.0",
     "istanbul": "^0.4.5",
