@@ -3,6 +3,7 @@ A delicious and easy to cook CDN file caching for offline development environmen
 
 [![Npm Version](https://img.shields.io/npm/v/cheesebread.svg)](https://npmjs.com/package/cheesebread)
 [![Node Version](https://img.shields.io/node/v/cheesebread.svg)](https://npmjs.com/package/cheesebread)
+[![Build Status](https://travis-ci.org/gartz/cheesebread.svg?branch=master)](https://travis-ci.org/gartz/cheesebread)
 
 ```bash
 npm start
