@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape').test;
 const fs = require('fs');
 const os = require('os');
 const fse = require('fs-extra');

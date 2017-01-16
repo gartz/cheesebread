@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape').test;
 
 const cheesebread = require('../lib');
 
