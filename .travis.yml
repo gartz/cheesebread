@@ -9,3 +9,7 @@ scripts:
 after_success:
   - npm install -g codacy-coverage
   - codacy-coverage < coverage/lcov.info
+  - npm install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < coverage/lcov.info
+  - npm install -g bithound
+  - bithound check git@github.com:gartz/cheesebread.git
