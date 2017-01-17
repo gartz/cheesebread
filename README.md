@@ -6,6 +6,8 @@ A delicious and easy to cook CDN file caching for offline development environmen
 [![Build Status](https://travis-ci.org/gartz/cheesebread.svg?branch=master)](https://travis-ci.org/gartz/cheesebread)
 [![Codacy Coverage Badge](https://api.codacy.com/project/badge/Coverage/8acfda7d26394c8aadbcab6a9ccc5c42)](https://www.codacy.com/app/gartz/cheesebread?utm_source=github.com&utm_medium=referral&utm_content=gartz/cheesebread&utm_campaign=Badge_Coverage)
 [![Codacy Grade Badge](https://api.codacy.com/project/badge/Grade/8acfda7d26394c8aadbcab6a9ccc5c42)](https://www.codacy.com/app/gartz/cheesebread?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gartz/cheesebread&amp;utm_campaign=Badge_Grade)
+[![bitHound Code](https://www.bithound.io/github/gartz/cheesebread/badges/code.svg)](https://www.bithound.io/github/gartz/cheesebread)
+
 ```bash
 npm start
 ```
