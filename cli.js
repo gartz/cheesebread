@@ -11,7 +11,7 @@ const optionDefinitions = [
     alias: 'c',
     type: String,
     defaultOption: true,
-    typeLabel: `[underline]{folder}`,
+    typeLabel: '[underline]{folder}',
     description: 'The folder where cached data will be stored.'
   },
   {
@@ -42,12 +42,7 @@ const optionDefinitions = [
   }
 ];
 
-try {
-  var cliOptions = commandLineArgs(optionDefinitions);
-} catch (err) {
-  console.error(err.message);
-  process.exit(1);
-}
+const cliOptions = commandLineArgs(optionDefinitions);
 
 if (cliOptions.help) {
   const sections = [

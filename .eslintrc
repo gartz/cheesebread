@@ -5,6 +5,7 @@
   },
   "extends": "eslint:recommended",
   "rules": {
+    "no-console": "off",
     "accessor-pairs": "error",
     "array-bracket-spacing": [
       "error",
@@ -141,8 +142,6 @@
     "no-param-reassign": "error",
     "no-path-concat": "error",
     "no-plusplus": "error",
-    "no-process-env": "error",
-    "no-process-exit": "error",
     "no-proto": "error",
     "no-prototype-builtins": "error",
     "no-redeclare": [
@@ -167,7 +166,7 @@
     "no-throw-literal": "error",
     "no-trailing-spaces": "error",
     "no-undef-init": "error",
-    "no-undefined": "error",
+    "no-unused-vars": "error",
     "no-underscore-dangle": "error",
     "no-unmodified-loop-condition": "error",
     "no-unneeded-ternary": "error",
@@ -179,12 +178,10 @@
     "no-useless-constructor": "error",
     "no-useless-escape": "error",
     "no-useless-rename": "error",
-    "no-var": "error",
     "no-void": "error",
     "no-warning-comments": "error",
     "no-whitespace-before-property": "error",
     "no-with": "error",
-    "object-property-newline": "error",
     "object-shorthand": "error",
     "one-var": "off",
     "one-var-declaration-per-line": "error",
@@ -217,10 +214,6 @@
     "space-infix-ops": "error",
     "space-unary-ops": "error",
     "spaced-comment": "error",
-    "strict": [
-      "error",
-      "never"
-    ],
     "template-curly-spacing": [
       "error",
       "never"
@@ -230,7 +223,6 @@
       "never"
     ],
     "valid-jsdoc": "error",
-    "vars-on-top": "error",
     "wrap-iife": "error",
     "wrap-regex": "error",
     "yield-star-spacing": "error",
