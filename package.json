@@ -39,14 +39,14 @@
   "homepage": "https://github.com/gartz/cheesebread#readme",
   "dependencies": {
     "command-line-args": "^3.0.5",
-    "command-line-usage": "^3.0.8",
+    "command-line-usage": "^4.0.0",
     "express": "^4.14.0",
     "node-fetch": "^1.6.3"
   },
   "devDependencies": {
     "eslint": "^3.13.1",
     "faucet": "0.0.1",
-    "fs-extra": "^1.0.0",
+    "fs-extra": "^2.0.0",
     "istanbul": "^0.4.5",
     "tape": "^4.6.3"
   }
