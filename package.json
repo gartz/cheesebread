@@ -1,6 +1,6 @@
 {
   "name": "cheesebread",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "A delicious and easy to cook CDN file caching for offline development environments.",
   "engines": {
     "node": ">=6"
