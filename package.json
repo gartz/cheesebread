@@ -10,7 +10,8 @@
     "start": "node server.js",
     "test": "rm -rf coverage && istanbul cover --print none tape tests/**/*.js | faucet && istanbul report text",
     "cover": "rm -rf coverage && istanbul cover --print none tape tests/**/*.js | faucet && istanbul report text; open coverage/lcov-report/index.html",
-    "lint": "eslint *.js tests/*.js"
+    "lint": "eslint *.js tests/*.js",
+    "build": "docker build -t gartz/cheesebread:$(npm view cheesebread version | cut -d. -f1,2,3)$(git symbolic-ref --short HEAD | awk '{if($1 !=\"master\") print \"-\"$1}') -t gartz/cheesebread:$(npm view cheesebread version | cut -d. -f1,2)$(git symbolic-ref --short HEAD | awk '{if($1 !=\"master\") print \"-\"$1}') -t gartz/cheesebread:$(npm view cheesebread version | cut -d. -f1)$(git symbolic-ref --short HEAD | awk '{if($1 !=\"master\") print \"-\"$1}') -t gartz/cheesebread:latest$(git symbolic-ref --short HEAD | awk '{if($1 !=\"master\") print \"-\"$1}') ."
   },
   "bin": {
     "cheesebread": "./cli.js"
