@@ -1,4 +1,4 @@
-FROM node:6.9.4
+FROM node:6.9.4-alpine
 MAINTAINER Gabriel Reitz Giannattasio <g@gartz.me>
 
 ENV PORT=3000 HOST=0.0.0.0 CACHE_DIR=/cache LOG=true EXTERNAL_URL=http://localhost:3000
