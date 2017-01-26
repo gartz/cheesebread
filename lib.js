@@ -66,6 +66,7 @@ function createApp(options) {
       })
     ;
   });
+  return app;
 }
 
 createApp.urlToFilename = urlToFilename;
