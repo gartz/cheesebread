@@ -7,8 +7,7 @@ EXPOSE 3000
 
 WORKDIR /cheese-bread-js
 
-COPY package.json .
-COPY server.js .
+COPY package.json server.js lib.js cli.js ./
 
 VOLUME /cache
 
